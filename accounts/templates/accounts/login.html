@@ -1,0 +1,59 @@
+{% load static %}
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>44location | Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static '/css/pilier.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="top">
+            <ul class="menu">
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Account connexion</h2>
+        <br><br><br>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username..." class="form-control">
+            <br><br>
+            <input type="password" name="password" placeholder="Password..." class="form-control" >
+            <br><br>
+            <input type="submit" name="connexion" value="Connexion">
+        </form>
+        <br>
+
+        <h2>Don't have an account ?&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'register' %}">Sign up</a></h2>
+
+        <h2>Forgot password ?&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Reset now</a></h2>
+
+    </main>
+    <footer>
+        <span id="copyright">&copy; 44location 2021</span>
+        <nav class="bottom">
+            <ul>
+                <li>
+                    <a href="https://facebook.com" class="fa fa-facebook" target="_blank"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com" class="fa fa-twitter" target="_blank"></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" class="fa fa-instagram" target="_blank"></a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

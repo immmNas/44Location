@@ -1,0 +1,44 @@
+{% extends 'dashboard/main.html' %}
+
+
+{% block content %}
+
+<br>
+
+		<div class="row">
+			<div class="col-md">
+				<div class="card card-body">
+					<h5>Cars</h5>
+				</div>
+				<div class="card card-body">
+					<table class="table">
+						<tr>
+							<th>Brand</th>
+							<th>Model</th>
+							<th>Max speed</th>
+							<th>Description</th>
+							<th>Buy date</th>
+							<th>Transmission</th>
+							<th>Carburant</th>
+							<th>Consumption</th>
+						</tr>
+
+						{% for i in car %}
+							<tr>
+								<td>{{i.brand}}</td>
+								<td>{{i.model}}</td>
+								<td>{{i.max_speed}}</td>
+								<td>{{i.description}}</td>
+								<td>{{i.buy_date}}</td>
+								<td>{{i.carburant}}</td>
+								<td>{{i.consumption }}</td>
+							</tr>
+						{% endfor %}
+
+					</table>
+				</div>
+			</div>
+
+		</div>
+
+{% endblock %}
